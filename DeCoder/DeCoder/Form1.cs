@@ -20,7 +20,7 @@ namespace DeCoder
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
             switch (e.KeyChar)
             {
                 case 'a':
@@ -195,4 +195,4 @@ namespace DeCoder
             }
         }
     }
-    }
+}
