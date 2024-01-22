@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,15 +15,15 @@ namespace PokeDex
     enum attack {Special_Attack, Special_Defense, Attack, Defense}
     struct Pokemon
     {
-        string Name;
-        string Type;
-        int Level;
-        attack AttackType;
-        int HP;
-        int Exp;
-        bool Legandary;
-        bool Shiny;
-        int Generation;
+        public string Name;
+        public string Type;
+        public int Level;
+        public attack AttackType;
+        public int HP;
+        public int Exp;
+        public bool Legandary;
+        public bool Shiny;
+        public int Generation;
     }
     public partial class Form1 : Form
     {
@@ -39,6 +40,37 @@ namespace PokeDex
                 string S = inFile.ReadToEnd();
                 inFile.Close();
             }
+        }
+
+        private void ReadPokemon(string s)
+        {
+            Pokemon p = new Pokemon();
+            string[] fields = s.Split('|');
+            p.Name = fields[0];
+            p.Type = fields[1];
+            p.Level = int.Parse(fields[2]);
+            p.AttackType = (attack) Enum.Parse(typeof(attack), fields[3]);
+            p.HP= int.Parse(fields[4]);
+            p.Exp = int.Parse(fields[5]);
+            if (LegendaryTextbox.Checked == true)
+            {
+                p.Legandary = fields[6].ToString() == "true";
+            }
+            else
+            {
+                p.Legandary = fields[6].ToString() == "false";
+            }
+            if (ShinyTextbox.Checked == true)
+            {
+                p.Shiny = fields[7].ToString() == "true";
+            }
+            else
+            {
+                p.Shiny = fields[7].ToString() == "false";
+            }
+            p.Generation = int.Parse(fields[8]);
+
+
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
