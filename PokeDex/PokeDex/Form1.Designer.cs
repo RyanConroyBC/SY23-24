@@ -40,21 +40,27 @@
             this.HPTextbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ExpTextbox = new System.Windows.Forms.TextBox();
-            this.ShinyTextbox = new System.Windows.Forms.CheckBox();
-            this.LegendaryTextbox = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.GenerationTextbox = new System.Windows.Forms.TextBox();
             this.PokemonPictureBox = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.DebugTextbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.FirstButton = new System.Windows.Forms.Button();
+            this.PreviousButton = new System.Windows.Forms.Button();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.LastButton = new System.Windows.Forms.Button();
+            this.CurrentLabel = new System.Windows.Forms.Label();
+            this.DebugTextbox = new System.Windows.Forms.TextBox();
+            this.NewButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PokemonPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // NameTextbox
             // 
-            this.NameTextbox.Location = new System.Drawing.Point(64, 12);
+            this.NameTextbox.Location = new System.Drawing.Point(76, 12);
             this.NameTextbox.Name = "NameTextbox";
             this.NameTextbox.Size = new System.Drawing.Size(100, 22);
             this.NameTextbox.TabIndex = 0;
@@ -79,7 +85,7 @@
             // 
             // TypeTextbox
             // 
-            this.TypeTextbox.Location = new System.Drawing.Point(64, 40);
+            this.TypeTextbox.Location = new System.Drawing.Point(76, 40);
             this.TypeTextbox.Name = "TypeTextbox";
             this.TypeTextbox.Size = new System.Drawing.Size(100, 22);
             this.TypeTextbox.TabIndex = 2;
@@ -95,7 +101,7 @@
             // 
             // LevelTextbox
             // 
-            this.LevelTextbox.Location = new System.Drawing.Point(64, 68);
+            this.LevelTextbox.Location = new System.Drawing.Point(76, 68);
             this.LevelTextbox.Name = "LevelTextbox";
             this.LevelTextbox.Size = new System.Drawing.Size(100, 22);
             this.LevelTextbox.TabIndex = 4;
@@ -108,7 +114,7 @@
             "Special_Defense",
             "Attack",
             "Defense"});
-            this.AttackTypeTextbox.Location = new System.Drawing.Point(64, 95);
+            this.AttackTypeTextbox.Location = new System.Drawing.Point(76, 95);
             this.AttackTypeTextbox.Name = "AttackTypeTextbox";
             this.AttackTypeTextbox.Size = new System.Drawing.Size(100, 24);
             this.AttackTypeTextbox.TabIndex = 6;
@@ -133,7 +139,7 @@
             // 
             // HPTextbox
             // 
-            this.HPTextbox.Location = new System.Drawing.Point(64, 125);
+            this.HPTextbox.Location = new System.Drawing.Point(76, 125);
             this.HPTextbox.Name = "HPTextbox";
             this.HPTextbox.Size = new System.Drawing.Size(100, 22);
             this.HPTextbox.TabIndex = 8;
@@ -149,30 +155,10 @@
             // 
             // ExpTextbox
             // 
-            this.ExpTextbox.Location = new System.Drawing.Point(64, 153);
+            this.ExpTextbox.Location = new System.Drawing.Point(76, 153);
             this.ExpTextbox.Name = "ExpTextbox";
             this.ExpTextbox.Size = new System.Drawing.Size(100, 22);
             this.ExpTextbox.TabIndex = 10;
-            // 
-            // ShinyTextbox
-            // 
-            this.ShinyTextbox.AutoSize = true;
-            this.ShinyTextbox.Location = new System.Drawing.Point(267, 40);
-            this.ShinyTextbox.Name = "ShinyTextbox";
-            this.ShinyTextbox.Size = new System.Drawing.Size(62, 20);
-            this.ShinyTextbox.TabIndex = 12;
-            this.ShinyTextbox.Text = "Shiny";
-            this.ShinyTextbox.UseVisualStyleBackColor = true;
-            // 
-            // LegendaryTextbox
-            // 
-            this.LegendaryTextbox.AutoSize = true;
-            this.LegendaryTextbox.Location = new System.Drawing.Point(267, 66);
-            this.LegendaryTextbox.Name = "LegendaryTextbox";
-            this.LegendaryTextbox.Size = new System.Drawing.Size(94, 20);
-            this.LegendaryTextbox.TabIndex = 13;
-            this.LegendaryTextbox.Text = "Legendary";
-            this.LegendaryTextbox.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -217,14 +203,6 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // DebugTextbox
-            // 
-            this.DebugTextbox.Location = new System.Drawing.Point(182, 178);
-            this.DebugTextbox.Multiline = true;
-            this.DebugTextbox.Name = "DebugTextbox";
-            this.DebugTextbox.Size = new System.Drawing.Size(179, 114);
-            this.DebugTextbox.TabIndex = 19;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 239);
@@ -234,11 +212,105 @@
             this.button1.Text = "Open";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(261, 43);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(62, 20);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.Text = "Shiny";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(261, 66);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(94, 20);
+            this.checkBox2.TabIndex = 22;
+            this.checkBox2.Text = "Legendary";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // FirstButton
+            // 
+            this.FirstButton.Location = new System.Drawing.Point(12, 299);
+            this.FirstButton.Name = "FirstButton";
+            this.FirstButton.Size = new System.Drawing.Size(164, 63);
+            this.FirstButton.TabIndex = 23;
+            this.FirstButton.Text = "First";
+            this.FirstButton.UseVisualStyleBackColor = true;
+            this.FirstButton.Click += new System.EventHandler(this.FirstButton_Click);
+            // 
+            // PreviousButton
+            // 
+            this.PreviousButton.Location = new System.Drawing.Point(182, 298);
+            this.PreviousButton.Name = "PreviousButton";
+            this.PreviousButton.Size = new System.Drawing.Size(179, 63);
+            this.PreviousButton.TabIndex = 24;
+            this.PreviousButton.Text = "Previous";
+            this.PreviousButton.UseVisualStyleBackColor = true;
+            this.PreviousButton.Click += new System.EventHandler(this.PreviousButton_Click);
+            // 
+            // NextButton
+            // 
+            this.NextButton.Location = new System.Drawing.Point(15, 368);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(161, 63);
+            this.NextButton.TabIndex = 25;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // LastButton
+            // 
+            this.LastButton.Location = new System.Drawing.Point(182, 368);
+            this.LastButton.Name = "LastButton";
+            this.LastButton.Size = new System.Drawing.Size(179, 63);
+            this.LastButton.TabIndex = 26;
+            this.LastButton.Text = "Last";
+            this.LastButton.UseVisualStyleBackColor = true;
+            this.LastButton.Click += new System.EventHandler(this.LastButton_Click);
+            // 
+            // CurrentLabel
+            // 
+            this.CurrentLabel.AutoSize = true;
+            this.CurrentLabel.Location = new System.Drawing.Point(15, 452);
+            this.CurrentLabel.Name = "CurrentLabel";
+            this.CurrentLabel.Size = new System.Drawing.Size(0, 16);
+            this.CurrentLabel.TabIndex = 27;
+            // 
+            // DebugTextbox
+            // 
+            this.DebugTextbox.Location = new System.Drawing.Point(182, 178);
+            this.DebugTextbox.Multiline = true;
+            this.DebugTextbox.Name = "DebugTextbox";
+            this.DebugTextbox.Size = new System.Drawing.Size(179, 114);
+            this.DebugTextbox.TabIndex = 19;
+            // 
+            // NewButton
+            // 
+            this.NewButton.Location = new System.Drawing.Point(182, 437);
+            this.NewButton.Name = "NewButton";
+            this.NewButton.Size = new System.Drawing.Size(179, 73);
+            this.NewButton.TabIndex = 28;
+            this.NewButton.Text = "New";
+            this.NewButton.UseVisualStyleBackColor = true;
+            this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 304);
+            this.ClientSize = new System.Drawing.Size(369, 522);
+            this.Controls.Add(this.NewButton);
+            this.Controls.Add(this.CurrentLabel);
+            this.Controls.Add(this.LastButton);
+            this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.PreviousButton);
+            this.Controls.Add(this.FirstButton);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.DebugTextbox);
             this.Controls.Add(this.SaveButton);
@@ -246,8 +318,6 @@
             this.Controls.Add(this.PokemonPictureBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.GenerationTextbox);
-            this.Controls.Add(this.LegendaryTextbox);
-            this.Controls.Add(this.ShinyTextbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ExpTextbox);
             this.Controls.Add(this.label2);
@@ -283,15 +353,21 @@
         private System.Windows.Forms.TextBox HPTextbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ExpTextbox;
-        private System.Windows.Forms.CheckBox ShinyTextbox;
-        private System.Windows.Forms.CheckBox LegendaryTextbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox GenerationTextbox;
         private System.Windows.Forms.PictureBox PokemonPictureBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.TextBox DebugTextbox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button FirstButton;
+        private System.Windows.Forms.Button PreviousButton;
+        private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Button LastButton;
+        private System.Windows.Forms.Label CurrentLabel;
+        private System.Windows.Forms.TextBox DebugTextbox;
+        private System.Windows.Forms.Button NewButton;
     }
 }
 
